@@ -9,5 +9,5 @@
 
 2) ### Make navigation graph and successful Authentication
    
-<img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/000614e2-3667-4e65-bf45-086cb24ddb6d" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
-<img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/0be40261-8721-407d-8ff0-6e7f7f701d93" width="800" height="370" style="border: 2px solid #000; border-radius: 10px;">
+<img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/000614e2-3667-4e65-bf45-086cb24ddb6d" width="750" height="370" style="border: 2px solid #000; border-radius: 10px;">
+<img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/0be40261-8721-407d-8ff0-6e7f7f701d93" width="750" height="370" style="border: 2px solid #000; border-radius: 10px;">
