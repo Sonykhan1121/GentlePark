@@ -11,12 +11,13 @@
         android:id="@+id/first_name"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="First Name"
-
         android:textAlignment="center"
+        android:textColor="#0E0D0D"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/have_account" />
 
@@ -29,6 +30,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:textAlignment="center"
+        android:textColor="#0E0D0D"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -40,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Do you have an account? Login"
+        android:textColor="#1B1818"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -62,7 +65,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="108dp"
         android:fontFamily="@font/aclonica"
         android:text="GentlePark"
         android:textColor="#050505"
@@ -79,19 +82,17 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/google_register_id"
         app:layout_constraintEnd_toEndOf="@+id/google_register_id"
-        app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toStartOf="@+id/google_register_id"
-        app:layout_constraintTop_toTopOf="@+id/google_register_id"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintTop_toTopOf="@+id/google_register_id" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/register_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:background="@drawable/btn_drawable1"
-        android:drawableLeft="@drawable/login_gp"
-        android:paddingLeft="5dp"
+        android:drawableLeft="@drawable/create"
+        android:paddingLeft="10dp"
         android:text="REGISTER"
         android:textAllCaps="false"
         android:textColor="#F8F8F8"
@@ -143,18 +144,24 @@
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="731dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.09" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.09"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="222dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.91" />
+        app:layout_constraintBottom_toTopOf="@+id/first_name"
+        app:layout_constraintGuide_percent="0.91"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/last_name_id"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -162,6 +169,7 @@
         android:hint="Last Name"
         android:inputType="text"
         android:textAlignment="center"
+        android:textColor="#0E0D0D"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -176,15 +184,17 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
+        android:textColor="#0E0D0D"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/last_name_id" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="80dp"
-        android:layout_height="180dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/have_account"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
