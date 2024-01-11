@@ -85,6 +85,8 @@
         app:layout_constraintStart_toStartOf="@+id/google_register_id"
         app:layout_constraintTop_toTopOf="@+id/google_register_id" />
 
+
+
     <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/register_id"
         android:layout_width="0dp"
@@ -92,15 +94,18 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/btn_drawable1"
         android:drawableLeft="@drawable/create"
+        android:gravity="center"
         android:paddingLeft="10dp"
         android:text="REGISTER"
         android:textAllCaps="false"
         android:textColor="#F8F8F8"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintVertical_bias="0.106" />
 
     <ImageView
         android:id="@+id/facebook_login"

@@ -14,9 +14,12 @@ import androidx.lifecycle.lifecycleScope
 import com.example.gentlepark.R
 import com.example.gentlepark.data.User
 import com.example.gentlepark.databinding.FragmentRegisterBinding
+import com.example.gentlepark.util.RegisterValidation
 import com.example.gentlepark.util.Resource
 import com.example.gentlepark.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 
 @AndroidEntryPoint
@@ -60,6 +63,29 @@ class RegisterFragment: Fragment() {
                     }
                     else -> Unit
                 }
+            }
+        }
+        lifecycleScope.launchWhenStarted {
+            viewModel.validation.collect{validation ->
+                if(validation.email  is RegisterValidation.Failed)
+                {
+                    withContext(Dispatchers.Main){
+                        binding.emailRegisterId.apply {
+                            requestFocus()
+                            error = validation.email.message
+                        }
+                    }
+                }
+                if(validation.password is RegisterValidation.Failed)
+                {
+                    withContext(Dispatchers.Main){
+                        binding.editTextTextPassword.apply {
+                            requestFocus()
+                            error = validation.password.message
+                        }
+                    }
+                }
+
             }
         }
     }
