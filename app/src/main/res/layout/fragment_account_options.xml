@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/create_id"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -80,9 +80,9 @@
         android:textAllCaps="false"
         android:textColor="#151313"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
+        app:layout_constraintEnd_toEndOf="@+id/create_id"
         app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="@+id/appCompatButton"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
+        app:layout_constraintStart_toStartOf="@+id/create_id"
+        app:layout_constraintTop_toBottomOf="@+id/create_id"
         app:layout_constraintVertical_bias="0.238" />
 </androidx.constraintlayout.widget.ConstraintLayout>
