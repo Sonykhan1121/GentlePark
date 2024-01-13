@@ -94,5 +94,8 @@ dependencies {
 
     //Coroutines with firebase
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1")
+
+    //custom toast
+    implementation ("io.github.shashank02051997:FancyToast:2.0.2")
 }
 
