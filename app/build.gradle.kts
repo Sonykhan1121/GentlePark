@@ -61,9 +61,9 @@ dependencies {
 
 
     //Navigation component
-    val nav_version = "2.7.6"
-    implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.6")
 
     //loading button
     implementation ("br.com.simplepass:loading-button-android:2.2.0")

@@ -50,6 +50,7 @@ class RegisterFragment: Fragment() {
                 )
                 val password = editTextTextPassword.text.toString()
                 viewModel.createAccountwithEmailandPassword(user,password)
+                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
         }
         lifecycleScope.launchWhenStarted {

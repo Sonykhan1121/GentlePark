@@ -13,11 +13,16 @@ import androidx.navigation.fragment.findNavController
 import com.example.gentlepark.R
 import com.example.gentlepark.activities.ShoppingActivity
 import com.example.gentlepark.databinding.FragmentLoginBinding
+import com.example.gentlepark.dialog.setupBottomSheetDialog
+import com.example.gentlepark.util.RegisterValidation
 import com.example.gentlepark.util.Resource
 import com.example.gentlepark.viewmodel.LoginViewModel
+import com.google.android.material.snackbar.Snackbar
 import com.shashank.sony.fancytoastlib.FancyToast
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class LoginFragment: Fragment() {
@@ -45,6 +50,31 @@ class LoginFragment: Fragment() {
 
             }
         }
+        binding.forgetPassword.setOnClickListener {
+            setupBottomSheetDialog { email->
+                viewmodel.resetPassword(email)
+            }
+
+        }
+        lifecycleScope.launchWhenStarted {
+            viewmodel.resetPassword.collect{
+                when(it){
+                    is Resource.Loading  ->{
+
+                    }
+                    is Resource.Success ->{
+                        Snackbar.make(requireView(),"Reset link was sent to your email",Snackbar.LENGTH_LONG).show()
+                    }
+                    is Resource.Error ->{
+                        Snackbar.make(requireView(),"Error ${it.message}",Snackbar.LENGTH_LONG).show()
+
+                    }
+                    else ->{
+                        Unit
+                    }
+                }
+            }
+        }
         lifecycleScope.launchWhenStarted {
             viewmodel.login.collect{
                 when(it){
@@ -68,6 +98,29 @@ class LoginFragment: Fragment() {
                        Unit
                     }
                 }
+            }
+        }
+        lifecycleScope.launchWhenStarted {
+            viewmodel.validation.collect{validation ->
+                if(validation.email  is RegisterValidation.Failed)
+                {
+                    withContext(Dispatchers.Main){
+                        binding.editTextTextEmailAddress.apply {
+                            requestFocus()
+                            error = validation.email.message
+                        }
+                    }
+                }
+                if(validation.password is RegisterValidation.Failed)
+                {
+                    withContext(Dispatchers.Main){
+                        binding.editTextTextPassword.apply {
+                            requestFocus()
+                            error = validation.password.message
+                        }
+                    }
+                }
+
             }
         }
     }
