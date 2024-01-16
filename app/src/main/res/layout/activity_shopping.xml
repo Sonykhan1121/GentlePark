@@ -29,7 +29,7 @@
         app:itemPaddingTop="10dp"
         app:itemPaddingBottom="10dp"
         app:itemRippleColor="#FF5722"
-        app:itemIconTint="#91F811"
+        app:itemIconTint="@drawable/bottom_navigation_color_selector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
