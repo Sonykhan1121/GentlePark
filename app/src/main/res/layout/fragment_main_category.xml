@@ -14,9 +14,10 @@
             android:layout_height="match_parent"
             >
             <ProgressBar
+                android:id="@+id/progress_id_main_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -37,10 +38,12 @@
                 android:id="@+id/tv_bestdeals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Best deals"
-                android:textSize="22sp"
-                android:textStyle="bold"
                 android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
+                android:text="Best deals"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rv_special_products" />
@@ -58,11 +61,13 @@
                 android:id="@+id/tv_bestProducts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Best Products"
                 android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
 
+                android:text="Best Products"
+                android:textColor="#000000"
                 android:textSize="22sp"
-                android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/rv_special_products"
                 app:layout_constraintTop_toBottomOf="@+id/rv_bestdeals_products" />

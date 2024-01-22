@@ -40,6 +40,7 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
             WinterFragment(),
             SummerFragment()
         )
+        binding.viewpagerhome.isUserInputEnabled = false
         val viewPager2Adapter = HomeViewpagerAdapter(categoriesFragments,childFragmentManager,lifecycle)
         binding.viewpagerhome.adapter = viewPager2Adapter
         TabLayoutMediator(binding.tablayout,binding.viewpagerhome){tab,position ->

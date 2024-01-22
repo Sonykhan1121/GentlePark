@@ -18,3 +18,7 @@
 <img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/350318b0-9f0f-49f1-9664-96bab0d72e0b" width="200" height="400" style="border: 2px solid #000; border-radius: 10px;">
 <img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/60de1304-f1ce-44ca-8c33-d8ddd1ce8650" width="200" height="400" style="border: 2px solid #000; border-radius: 10px;">
 <img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/64c37acc-d92c-42a2-b942-f81cfaeb5e2c" width="200" height="400" style="border: 2px solid #000; border-radius: 10px;">
+
+3) ### Implements three recyleview from firbase database : Special Products , Best Deals , Best Products
+
+<img src="https://github.com/Sonykhan1121/GentlePark/assets/45848552/ec3065f4-2329-4610-a5ea-e9239bad4f0c" width="200" height="400" style="border: 2px solid #000; border-radius: 10px;">

@@ -4,25 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp"
     app:cardElevation="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="match_parent"
+       android:padding="10dp"
         android:background="@color/white">
 
         <ImageView
             android:id="@+id/image_id_best_deals"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -32,8 +34,11 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
             android:text="TextView"
+            android:textColor="#040404"
             android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.013"
             app:layout_constraintStart_toEndOf="@+id/image_id_best_deals"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,6 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="origin $"
+            android:textColor="#040404"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/title_id_best"
             app:layout_constraintTop_toBottomOf="@+id/title_id_best" />
 
@@ -50,8 +57,9 @@
             android:id="@+id/offer_price_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="4dp"
             android:text="TextView"
+            android:textColor="#040404"
             app:layout_constraintBottom_toBottomOf="@+id/original_price"
             app:layout_constraintStart_toEndOf="@+id/original_price"
             app:layout_constraintTop_toTopOf="@+id/original_price"
@@ -61,7 +69,6 @@
             android:id="@+id/see_product_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="36dp"
             android:background="@drawable/btn_drawable"
             android:padding="10dp"
             android:text="See Product"
@@ -69,6 +76,9 @@
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/offer_price_id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
